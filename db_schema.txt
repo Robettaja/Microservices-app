@@ -1,0 +1,5 @@
+CREATE TABLE redirect (
+    redirect_id INTEGER PRIMARY KEY,
+    input_url VARCHAR(1024) NOT NULL,
+    short_id VARCHAR(10) NOT NULL
+)
