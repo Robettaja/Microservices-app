@@ -54,3 +54,5 @@ desktop.ini
 
 # Mise local configuration overrides
 .mise.local.toml
+
+Migrations/
