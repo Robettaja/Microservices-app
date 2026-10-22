@@ -6,12 +6,20 @@
 
     <groupId>me.hideri.redirect</groupId>
     <artifactId>url-redirect</artifactId>
-    <version>0.0.0-DEV</version>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.javalin</groupId>
+            <artifactId>javalin</artifactId>
+            <version>7.2.3</version>
+        </dependency>
+    </dependencies>
 
 </project>
