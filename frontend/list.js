@@ -6,7 +6,7 @@ const getShortenedUrls = async () => {
         const json = await response.json();
 
         json.forEach(item => {
-            listContainer.innerHTML += `<p>${item.shortId}</p>`
+            listContainer.innerHTML += `<p>${item.ShortId}</p>`
         });
     } catch(err){
         listContainer.innerHTML += "<p style='color:red;'>Error fetching list</p>";
