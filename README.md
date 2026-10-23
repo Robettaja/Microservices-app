@@ -1,5 +1,5 @@
 # URL lyhentäjä aplikaatio
-Aplikaation on toteutettu mikropalvelu arkkitehtuurina.--
+Aplikaation on toteutettu mikropalvelu arkkitehtuurina.__
 Palvelut ovat:
 - [Frontend](frontend) joka vastaa käyttöliittymästä.
 - [URL Shortener](/url_shortener/) joka luo ja tallentaa lyhennetyt URL:it.
