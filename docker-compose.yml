@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: frontend/
+    ports:
+      - "80:80"
+  url_shortener:
+    build: url_shortener/ 
+    ports:
+      - "8080:8080"
+  url_redirect:
+    build: url_redirect/ 
+    ports:
+      - "7777:7777"
