@@ -22,7 +22,7 @@ const shortenUrl = async () => {
         shortenerContainer.innerHTML += 
             `<div class="shortener-result">
                 <h2>Your shortened URL</h2>
-                <p>http://localhost/${json.shortUrl}</p>
+                <a href=${json.shortUrl}>${json.shortUrl}</a>
             </div>`;
     } catch(err){
         shortenerContainer.innerHTML += `<p style='color:red;'>Fetch failed</p>`;
