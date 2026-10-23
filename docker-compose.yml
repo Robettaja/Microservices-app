@@ -10,7 +10,7 @@ services:
     environment:
       ConnectionStrings__DefaultConnection: "Data Source=/app/data/app.db"
     volumes:
-      - ./data:/app/data
+      - ./url_shortener/data:/app/data
     ports:
       - "8080:8080"
   url_redirect:
