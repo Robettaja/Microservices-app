@@ -3,12 +3,10 @@ services:
     build: frontend/
     ports:
       - "80:80"
+    depends_on:
+      - url_shortener
   url_shortener:
     build: url_shortener/ 
-    environment:
-      ConnectionStrings__DefaultConnection: "Data Source=/app/data/app.db"
-    volumes:
-      - ./data:/app/data
     ports:
       - "8080:8080"
   url_redirect:
