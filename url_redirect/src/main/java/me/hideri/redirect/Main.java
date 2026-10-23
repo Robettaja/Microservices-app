@@ -3,11 +3,26 @@ package me.hideri.redirect;
 import io.javalin.Javalin;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URI;
 
 public class Main {
+    static String readResponse(InputStream is) throws IOException {
+        final BufferedReader br = new BufferedReader(new InputStreamReader(is));
+        final StringBuilder sb = new StringBuilder();
+        String line;
+        while ((line = br.readLine()) != null) {
+            sb.append(line).append("\n");
+        }
+        br.close();
+        return sb.toString();
+    }
+
     static void main() {
         var app = Javalin.create(config -> {
             config.routes.get("/", ctx -> {
@@ -53,7 +68,7 @@ public class Main {
                     final HttpURLConnection connection = (HttpURLConnection) api.toURL().openConnection();
                     connection.setRequestMethod("GET");
 
-                    final JSONObject data = new JSONObject(connection.getResponseMessage());
+                    final JSONObject data = new JSONObject(readResponse(connection.getInputStream()));
 
                     if (data.getString("shortId").equals(shortId)) {
                         ctx.contentType("text/plain;charset=utf-8");
@@ -63,7 +78,7 @@ public class Main {
                         ctx.contentType("text/plain;charset=utf-8");
                         ctx.header("Location", "/err");
                     }
-                } catch (ConnectException ex) {
+                } catch (IOException ex) {
                     System.err.println("Connection to DB API failed, redirecting...");
                     ctx.contentType("text/plain;charset=utf-8");
                     ctx.header("Location", "/err");
