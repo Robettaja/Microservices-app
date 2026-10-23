@@ -3,6 +3,8 @@ services:
     build: frontend/
     ports:
       - "80:80"
+    depends_on:
+      - url_shortener
   url_shortener:
     build: url_shortener/ 
     ports:
