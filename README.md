@@ -1,5 +1,5 @@
 # URL lyhentäjä aplikaatio
-Aplikaation on toteutettu mikropalvelu arkkitehtuurina.
+Aplikaation on toteutettu mikropalvelu arkkitehtuurina.--
 Palvelut ovat:
 - [Frontend](frontend) joka vastaa käyttöliittymästä.
 - [URL Shortener](/url_shortener/) joka luo ja tallentaa lyhennetyt URL:it.
@@ -16,4 +16,8 @@ cd Microservices-app
 docker compose up -d --build
 ```
 
+
+## Docker osuus
+- Jokainen palvelu yrittää käynnistää itsensä maksimi viisi kertaa ongelma tilanteessa. 
+- Palvelut käyttävät portteja 80,7777 ja 8080.
 
