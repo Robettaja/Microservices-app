@@ -1,16 +1,15 @@
-# Url shortener palvelu 
-Palvelu on toteudettu dotnet 10.0 C# ohjelmointi kielellä. Palvelu käyttää taustallaan sqlite tietokantaa.
+# Url shortener palvelu 
+Palvelu on toteudettu ASP.net 10.0 C# ohjelmointi kielellä. Palvelu käyttää taustallaan sqlite tietokantaa.
 
 ## Suorittaminen
 
-Vaatimukset Dotnet SDK 
+Vaatimukset Dotnet SDK <br/>
 Asentaa paketit.
-```
+```bash
 dotnet Restore 
-
 ```
 Käynnistää sovelluksen Release tilassa.
-```
+```bash
 dotnet run -c Release
 ```
 
