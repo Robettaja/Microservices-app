@@ -6,7 +6,7 @@ const shortenUrl = async () => {
     const url = shortUrlInput.value.trim();
     if(url === "") return;
     try {
-        const response = await fetch("/api/url", {
+        const response = await fetch("/url_shortener/url", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
