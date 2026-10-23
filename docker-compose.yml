@@ -1,12 +1,14 @@
 services:
   frontend:
     build: frontend/
+    restart: on-failure:5
     ports:
       - "80:80"
     depends_on:
       - url_shortener
   url_shortener:
     build: url_shortener/ 
+    restart: on-failure:5
     environment:
       ConnectionStrings__DefaultConnection: "Data Source=/app/data/app.db"
     volumes:
@@ -15,5 +17,8 @@ services:
       - "8080:8080"
   url_redirect:
     build: url_redirect/ 
+    restart: on-failure:5
+    depends_on:
+      - url_shortener
     ports:
       - "7777:7777"
