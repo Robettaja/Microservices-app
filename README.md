@@ -21,4 +21,5 @@ docker compose up -d --build
 - Jokainen palvelu yrittää käynnistää itsensä maksimi viisi kertaa ongelma tilanteessa. 
 - Palvelut käyttävät portteja 80,7777 ja 8080.
 - Frontend ja Url redirect palvelu käynnistyvät Url shortener palvelun jälkeen, koska ne ovat riippuvaisia kyseisestä palvelusta.
+- Url shortener palvelu luo voluumin sqlite tietokantaa varten.
 
