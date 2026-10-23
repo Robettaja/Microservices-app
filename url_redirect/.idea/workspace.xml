@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="abc8d794-80ea-4628-8e59-f61cab135e41" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/hideri/redirect/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hideri/redirect/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1792683905962</updated>
       <workItem from="1792683910074" duration="2549000" />
-      <workItem from="1792754176431" duration="3704000" />
+      <workItem from="1792754176431" duration="4347000" />
     </task>
     <servers />
   </component>

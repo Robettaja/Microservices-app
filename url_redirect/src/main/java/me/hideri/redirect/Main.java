@@ -49,7 +49,7 @@ public class Main {
             config.routes.get("/s/{short-id}", ctx -> {
                 try {
                     final String shortId = ctx.pathParam("short-id");
-                    final URI api = new URI("http://localhost:8080/url?shortId=" + shortId);
+                    final URI api = new URI("http://url_shortener:8080/url?shortId=" + shortId);
                     final HttpURLConnection connection = (HttpURLConnection) api.toURL().openConnection();
                     connection.setRequestMethod("GET");
 
@@ -64,7 +64,7 @@ public class Main {
                         ctx.header("Location", "/err");
                     }
                 } catch (ConnectException ex) {
-                    System.err.println("Connection to DB API failed, redirecting to root...");
+                    System.err.println("Connection to DB API failed, redirecting...");
                     ctx.contentType("text/plain;charset=utf-8");
                     ctx.header("Location", "/err");
                 }
