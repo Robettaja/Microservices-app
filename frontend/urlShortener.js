@@ -18,11 +18,11 @@ const shortenUrl = async () => {
             throw new Error("Error in response");
         }
 
-        const json = response.json(); 
+        const json = await response.json(); 
         shortenerContainer.innerHTML += 
             `<div class="shortener-result">
                 <h2>Your shortened URL</h2>
-                <p>${json.ShortId}</p>
+                <p>${json.shortUrl}</p>
             </div>`;
     } catch(err){
         shortenerContainer.innerHTML += `<p style='color:red;'>Fetch failed</p>`;
